@@ -1,0 +1,18 @@
+name: workflow-tools
+kind: standalone
+version: 0.1.0
+description: |
+  Backend-agnostic workflow orchestration — 4 tools (workflow_run,
+  workflow_status, workflow_cancel, workflow_list_templates) that wrap
+  multiple backends behind a uniform interface.
+
+  Backends:
+   * ``inline``  — zero-config, runs DSL in-process (default)
+   * ``mc``      — delegates to nnnet/hermes-plugin-mc-tools (HTTP
+                    bridge to Mission Control); gracefully degrades
+                    when mc-tools is not loaded.
+
+  Backend selection per-call via ``backend`` argument or the
+  ``HERMES_WORKFLOW_BACKEND`` env var.
+author: nnnet/AiManager
+repo: https://github.com/nnnet/hermes-plugin-workflow-tools
